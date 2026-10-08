@@ -1,0 +1,127 @@
+Revision 6:
+- Homepage Lakaw Ta, Go Beyond section now uses a real Caohagan Island background image.
+- Homepage video section now uses the supplied TikTok ID 7657703659001613586 through TikTok official Embed Player.
+- Scroll-based play/pause uses IntersectionObserver and TikTok postMessage. A manual Play TikTok button is included as an autoplay fallback.
+- Added vercel.json for static Vercel deployment headers.
+
+REVISION 5 MEDIA UPDATE
+- Homepage TikTok: https://www.tiktok.com/@cebuislandguideph/video/7657703659001613586
+- Official TikTok player docs: https://developers.tiktok.com/docs/en/embed-player
+- Player behavior: autoplay=1, muted=1, loop=1, controls=1; JavaScript uses IntersectionObserver + TikTok postMessage play/pause.
+- Note: TikTok/browser autoplay policies can still prevent automatic playback in some environments. Users can use the player controls or open the original TikTok.
+
+LAPUGO TRAVEL & TOURS — REVISION 4 MEDIA SOURCES
+=================================================
+
+This revision intentionally removes Wikipedia/Wikimedia image URLs from the website.
+The added itinerary and gallery photographs come from travel blogs, travel articles,
+travel photography sites, or the user-supplied video links. Each displayed photo has
+an on-page courtesy/source credit and a link to its original article where available.
+
+KAWASAN CANYONEERING + PESCADOR ISLAND
+---------------------------------------
+Explore to Thrive — Moalboal and Pescador Island:
+https://exploretothrive.com/our-sardine-run-in-moalboal-and-pescador-island-a-once-in-a-lifetime-experience/
+
+OSLOB WHALE SHARKS
+------------------
+Travelberries — Whale Shark Watching in Oslob:
+https://www.travelberries.com/whale-shark-watching-oslob-cebu/
+
+Explore to Thrive — Whale Shark Watching in Oslob:
+https://exploretothrive.com/our-whale-shark-watching-experience-in-oslob-cebu-and-our-tips-for-first-time-visitors/
+
+TUMALOG FALLS
+-------------
+Travel Tayo — Exploring the Enchanting Tumalog Falls in Cebu:
+https://www.traveltayo.net/exploring-the-enchanting-tumalog-falls-in-cebu/
+
+Patrik Lord Travel Blog — Tumalog Falls, Cebu Island:
+https://www.lord.se/travel-blog/tumalog-falls-cebu-island
+
+Sarah Adventuring — Tumalog Falls in Oslob:
+https://sarahadventuring.com/tumalog-falls-oslob-cebu/
+
+MOALBOAL / PESCADOR
+-------------------
+We Seek Travel — Moalboal Sardine Run:
+https://www.weseektravel.com/moalboal-sardine-run-panagsama-beach/
+
+Explore to Thrive — Moalboal and Pescador Island:
+https://exploretothrive.com/our-sardine-run-in-moalboal-and-pescador-island-a-once-in-a-lifetime-experience/
+
+BANTAYAN ISLAND
+---------------
+Lucille Travels — Cebu: Bantayan Island, Kawasan Falls and City Tour:
+https://lucilletravels.blogspot.com/2017/01/CEBU.html
+
+Cebu.travel — Bantayan Island Guide:
+https://cebu.travel/guides/bantayan-island-guide
+
+Chill and Travel — Bantayan Island Travel Guide:
+https://chillandtravel.com/bantayan-island-travel-guide/
+
+Cebu Destinations — Bantayan Island Guide:
+https://cebudestinations.com/guide/bantayan-island-guide
+
+CEBU SAFARI & ADVENTURE PARK
+----------------------------
+My Cebu Photo Blog — In Photos: My First Time at the Cebu Safari & Adventure Park:
+https://mycebuphotoblog.com/2019/10/08/in-photos-my-first-time-at-the-cebu-safari-adventure-park/
+
+The article identifies the photographs as the author's work and the site states its
+Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 license. The
+prototype is academic/noncommercial. Confirm permission/license requirements before
+any commercial or public launch.
+
+Cebu Safari schedule/reference:
+https://cdnc.heyzine.com/flip-book/pdf/67bd8cbeda1aaf435696bab37a136235493fe4ce.pdf
+
+Additional package reference:
+https://www.travelcebu.ph/cebu-day-tours/cebu-safari-tour-package/
+
+YOUTUBE
+-------
+Bantayan video supplied by LapuGo:
+https://www.youtube.com/watch?v=73ijH-daPXs
+
+Cebu marketing/travel vlog used on the homepage:
+https://www.youtube.com/watch?v=jiHDJMb41sg
+
+The website uses thumbnail + direct YouTube playback links rather than problematic
+embedded players for the YouTube cards. This was done to avoid the previous player
+configuration error.
+
+TIKTOK
+------
+Video supplied by LapuGo:
+https://www.tiktok.com/@cebuislandguideph/video/7657703659001613586
+
+The homepage uses TikTok's official Embed Player:
+https://developers.tiktok.com/docs/en/embed-player
+
+The player is configured with autoplay, muted audio and looping. JavaScript uses an
+IntersectionObserver to request play when the player is visible and pause when it
+leaves the viewport. Browser autoplay rules can still override automatic playback,
+but the player remains interactive.
+
+DARK MODE
+---------
+Revision 4 defaults to dark mode. The sun/moon button in the navigation switches to
+light mode and saves the preference in localStorage.
+
+PHOTO RIGHTS REMINDER
+---------------------
+A courtesy credit is not automatically a commercial reuse license. Before using any
+third-party photograph in a public/commercial launch, verify the photographer/site's
+current license or obtain permission where required.
+
+
+REVISION 7 DEPLOYMENT NOTE
+- js/site-data.js contains a static copy of site-data.json so the front-end does not depend on a JSON fetch for initial rendering.
+- Keep all files and folders together under one project root for GitHub/Vercel.
+- .nojekyll is included for GitHub Pages.
+
+
+REVISION 8 DEPLOYMENT NOTE
+All project files were flattened into one root folder for GitHub/Vercel. Relative references use root-level filenames.

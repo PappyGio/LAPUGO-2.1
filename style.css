@@ -1,0 +1,1287 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+    --ink: #121212;
+    --paper: #F0F1F2;
+    --surface: #ffffff;
+    --surface-2: #e9edf0;
+    --sky: #70A6C1;
+    --blue: #315594;
+    --navy: #2F3675;
+    --white: #ffffff;
+    --muted: #657080;
+    --border: rgba(47, 54, 117, 0.14);
+    --shadow: 0 20px 50px rgba(18, 18, 18, 0.10);
+    --radius: 22px;
+    --max: 1180px;
+}
+
+html[data-theme="dark"] {
+    --ink: #f0f1f2;
+    --paper: #0b0d11;
+    --surface: #141820;
+    --surface-2: #1c222d;
+    --muted: #aeb9c5;
+    --border: rgba(112,166,193,.18);
+    --shadow: 0 20px 55px rgba(0,0,0,.35);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    transition: background .25s ease, color .25s ease;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(var(--max), calc(100% - 40px));
+    margin-inline: auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background:
+        linear-gradient(90deg, rgba(18,18,18,.94), rgba(47,54,117,.88)),
+        url('https://www.weseektravel.com/wp-content/uploads/2019/03/The-Best-Levels-at-Kawasan-Falls-1-of-1-e1623492348950-1024x640.jpg') center 48% / cover no-repeat;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 25px rgba(18,18,18,.16);
+}
+
+.navbar {
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.brand img {
+    width: 148px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.nav-links a {
+    color: #dfe9f1;
+    padding: 11px 13px;
+    border-radius: 999px;
+    font-size: 0.91rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--white);
+    background: rgba(112, 166, 193, 0.22);
+}
+
+.nav-cta {
+    background: linear-gradient(135deg, var(--sky), #4b8bb0);
+    color: var(--ink) !important;
+    padding-inline: 18px !important;
+}
+
+.menu-toggle {
+    display: none;
+    border: 1px solid rgba(255,255,255,0.18);
+    color: white;
+    background: transparent;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+}
+
+.hero {
+    min-height: 700px;
+    display: grid;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(18,18,18,0.95) 0%, rgba(47,54,117,0.73) 42%, rgba(18,18,18,0.18) 100%),
+        var(--hero-image) center/cover no-repeat;
+}
+
+.hero-content {
+    color: white;
+    max-width: 700px;
+    padding: 90px 0;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--sky);
+    margin-bottom: 15px;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.08;
+}
+
+h1 {
+    font-size: clamp(3.3rem, 7vw, 6.8rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+h3 {
+    font-size: 1.45rem;
+}
+
+.lead {
+    font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+    color: #e9f3f7;
+    max-width: 650px;
+    margin: 22px 0 30px;
+}
+
+.hero-actions,
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 13px 20px;
+    font-weight: 700;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--sky);
+    color: var(--ink);
+    box-shadow: 0 10px 28px rgba(112,166,193,.28);
+}
+
+.btn-secondary {
+    color: white;
+    border-color: rgba(255,255,255,.35);
+    background: rgba(255,255,255,.06);
+}
+
+.btn-dark {
+    background: var(--navy);
+    color: white;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 38px;
+}
+
+.section-heading p {
+    margin-top: 12px;
+    color: var(--muted);
+}
+
+.dark-section {
+    background: var(--ink);
+    color: white;
+}
+
+.dark-section .section-heading p {
+    color: #cbd6df;
+}
+
+.grid {
+    display: grid;
+    gap: 22px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.card-image {
+    height: 240px;
+    object-fit: cover;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.tag {
+    display: inline-flex;
+    border-radius: 999px;
+    padding: 5px 10px;
+    background: rgba(112,166,193,.16);
+    color: var(--navy);
+    font-size: .76rem;
+    font-weight: 700;
+}
+
+.price {
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 1.35rem;
+}
+
+.page-hero {
+    padding: 105px 0;
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(18,18,18,.93), rgba(47,54,117,.74)),
+        url('https://www.weseektravel.com/wp-content/uploads/2019/03/The-Best-Levels-at-Kawasan-Falls-1-of-1-e1623492348950-1024x640.jpg') center/cover no-repeat;
+    color: white;
+}
+
+body[data-page="contact"] .page-hero {
+    background:
+        linear-gradient(90deg, rgba(18,18,18,.94), rgba(47,54,117,.70)),
+        url('https://images.squarespace-cdn.com/content/v1/5fa1522044bdda192713063c/1618713439125-Y1Z46AK34S4WVM1B8BNS/Fort%2BSan%2BPedro%2Bin%2BCebu') center/cover no-repeat;
+}
+
+body[data-page="about"] .page-hero {
+    background:
+        linear-gradient(90deg, rgba(18,18,18,.94), rgba(47,54,117,.70)),
+        url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs5SmpUGbd8VszPB2fNSW4Y1HOu_G5gWXv0ZYUv5zMtMRjxQVUfugFVVJluDKXNhitI7skObt1WvvBpvYo1zr59lEUFiXo0x2sTxh3GWTmgBtwuoFyTuBB48FkW0vJJs1NFJzkUJ-YhCRo/') center/cover no-repeat;
+}
+
+body[data-page="gallery"] .page-hero {
+    background:
+        linear-gradient(90deg, rgba(18,18,18,.94), rgba(47,54,117,.70)),
+        url('https://exploretothrive.com/wp-content/uploads/2026/05/My-view-of-Pescador-Island-while-sitting-near-the-tip-of-our-boat-Cebu-Philippines-683x1024.jpeg') center/cover no-repeat;
+}
+
+body[data-page="tours"] .page-hero {
+    background:
+        linear-gradient(90deg, rgba(18,18,18,.94), rgba(47,54,117,.70)),
+        url('https://i2.wp.com/live.staticflickr.com/65535/48853714802_7b62a8a362_c.jpg?ssl=1&w=1200') center/cover no-repeat;
+}
+
+.page-hero p {
+    max-width: 700px;
+    margin-top: 15px;
+    color: #dfeaf0;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--navy);
+    border-radius: 999px;
+    padding: 9px 14px;
+    font-weight: 700;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--navy);
+    color: white;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0 35px;
+}
+
+.search-box input {
+    flex: 1;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    border: 1px solid #ccd4dd;
+    border-radius: 13px;
+    padding: 13px 14px;
+    outline: none;
+    background: var(--surface);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--sky);
+    box-shadow: 0 0 0 4px rgba(112,166,193,.15);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.form-group {
+    display: grid;
+    gap: 7px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.form-card {
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.timeline {
+    display: grid;
+    gap: 13px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 155px 1fr;
+    gap: 18px;
+    padding: 17px;
+    background: rgba(112,166,193,.08);
+    border-left: 4px solid var(--sky);
+    border-radius: 12px;
+}
+
+.timeline-time {
+    font-weight: 800;
+    color: var(--navy);
+}
+
+.check-list {
+    display: grid;
+    gap: 9px;
+    margin-top: 15px;
+}
+
+.check-list li {
+    list-style: none;
+    padding-left: 27px;
+    position: relative;
+}
+
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+    font-weight: 900;
+}
+
+.video-grid iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 16px;
+}
+
+.video-card {
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.video-thumb {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #111;
+}
+
+.video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.video-thumb:hover img {
+    transform: scale(1.04);
+}
+
+.video-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 66px;
+    height: 66px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(18,18,18,.82);
+    color: white;
+    font-size: 1.35rem;
+    box-shadow: 0 12px 35px rgba(0,0,0,.28);
+}
+
+.video-copy {
+    padding: 22px;
+}
+
+.video-credit,
+.photo-credit {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: .78rem;
+}
+
+.photo-source {
+    margin-top: 6px;
+    font-size: .78rem;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.photo-source:hover {
+    text-decoration: underline;
+}
+
+.gallery-grid {
+    columns: 3 260px;
+    column-gap: 16px;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    cursor: pointer;
+    background: var(--navy);
+}
+
+.gallery-item img {
+    transition: transform .35s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.gallery-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 60px 18px 16px;
+    color: white;
+    background: linear-gradient(transparent, rgba(18,18,18,.94));
+}
+
+.gallery-caption strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.gallery-caption span {
+    display: block;
+    margin-top: 4px;
+    color: #dfeaf0;
+    font-size: .78rem;
+    line-height: 1.4;
+}
+
+.map-frame {
+    width: 100%;
+    min-height: 430px;
+    border: 0;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.info-list {
+    display: grid;
+    gap: 18px;
+}
+
+.info-item strong {
+    display: block;
+    color: var(--navy);
+}
+
+.notice {
+    padding: 18px;
+    border-radius: 15px;
+    background: rgba(112,166,193,.14);
+    border: 1px solid rgba(49,85,148,.12);
+}
+
+.footer {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(18,18,18,.94), rgba(47,54,117,.88)),
+        url('https://www.weseektravel.com/wp-content/uploads/2019/03/The-Best-Levels-at-Kawasan-Falls-1-of-1-e1623492348950-1024x640.jpg') center / cover no-repeat;
+    color: #d8e2ea;
+    padding: 45px 0 25px;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(18,18,18,.86), rgba(47,54,117,.70));
+    pointer-events: none;
+}
+
+.footer > * {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-gallery {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 8px;
+    margin-bottom: 38px;
+}
+
+.footer-gallery img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 13px;
+    border: 1px solid rgba(255,255,255,.14);
+    opacity: .84;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+    gap: 35px;
+}
+
+.footer img {
+    width: 155px;
+    margin-bottom: 15px;
+}
+
+.footer h3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 13px;
+    color: white;
+}
+
+.footer a {
+    color: #bfcbd5;
+    display: block;
+    margin: 7px 0;
+}
+
+.footer a:hover {
+    color: var(--sky);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.10);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: .85rem;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(18,18,18,.82);
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: min(950px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    background: var(--surface);
+    border-radius: 20px;
+}
+
+.modal-content img {
+    max-height: 75vh;
+    object-fit: contain;
+    background: #111;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(18,18,18,.85);
+    color: white;
+    font-size: 1.4rem;
+}
+
+.toast {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 3000;
+    background: var(--navy);
+    color: white;
+    padding: 15px 18px;
+    border-radius: 13px;
+    box-shadow: var(--shadow);
+    transform: translateY(130px);
+    opacity: 0;
+    transition: .25s ease;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat {
+    padding: 24px;
+    background: var(--surface);
+    border-radius: 18px;
+    border: 1px solid var(--border);
+}
+
+.stat strong {
+    display: block;
+    color: var(--navy);
+    font-size: 2rem;
+}
+
+.mobile-only {
+    display: none;
+}
+
+
+/* Homepage Cebu attraction slideshow */
+.attraction-slider {
+    position: relative;
+    min-height: 760px;
+    overflow: hidden;
+    background: var(--ink);
+}
+
+.attraction-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease, visibility .8s ease;
+}
+
+.attraction-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.attraction-slide img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: slideZoom 7s ease-out both;
+}
+
+.attraction-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(18,18,18,.96), rgba(47,54,117,.72) 45%, rgba(18,18,18,.08)),
+        linear-gradient(0deg, rgba(18,18,18,.75), transparent 55%);
+}
+
+@keyframes slideZoom {
+    from { transform: scale(1.06); }
+    to { transform: scale(1); }
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+}
+
+.slide-copy {
+    max-width: 720px;
+    padding: 90px 0 140px;
+    color: white;
+}
+
+.slide-copy h1 {
+    font-size: clamp(3.2rem, 7vw, 6.5rem);
+    margin: 12px 0 18px;
+}
+
+.slide-copy p {
+    max-width: 650px;
+    color: #e4edf2;
+    font-size: clamp(1rem, 1.7vw, 1.25rem);
+}
+
+.slide-category {
+    display: inline-flex;
+    padding: 7px 13px;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 999px;
+    background: rgba(112,166,193,.22);
+    color: white;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .13em;
+}
+
+.slide-controls {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    bottom: 30px;
+    width: min(var(--max), calc(100% - 40px));
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.slide-dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.slide-dot {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.42);
+}
+
+.slide-dot.active {
+    width: 28px;
+    border-radius: 99px;
+    background: var(--sky);
+}
+
+.slide-arrows {
+    display: flex;
+    gap: 8px;
+}
+
+.slide-arrow {
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    background: rgba(18,18,18,.30);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.attraction-strip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.attraction-panel {
+    position: relative;
+    min-height: 310px;
+    overflow: hidden;
+    border-radius: 24px;
+    color: white;
+}
+
+.attraction-panel img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.attraction-panel:hover img {
+    transform: scale(1.05);
+}
+
+.attraction-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(18,18,18,.92), rgba(18,18,18,.04));
+}
+
+.attraction-panel-content {
+    position: absolute;
+    z-index: 2;
+    left: 25px;
+    right: 25px;
+    bottom: 23px;
+}
+
+.attraction-panel-content h3 {
+    font-size: 2rem;
+    margin: 6px 0;
+}
+
+.attraction-panel-content p {
+    color: #e0eaf0;
+}
+
+@media (max-width: 700px) {
+    .home-lakaw-content { min-height: 480px; }
+    .home-lakaw-actions { justify-content: flex-start; }
+    .tiktok-shell iframe { height: 650px; min-height: 650px; max-height: none; }
+    .tour-detail-hero { min-height: 520px; }
+    .tour-detail-overlay { padding: 28px; }
+    .tour-detail-overlay h1 { font-size: clamp(2.6rem, 12vw, 4.2rem); }
+    .rate-table-wrap { padding: 20px; }
+    .attraction-slider,
+    .slide-content {
+        min-height: 680px;
+    }
+
+    .slide-copy {
+        padding: 55px 0 115px;
+    }
+
+    .slide-copy h1 {
+        font-size: clamp(3rem, 14vw, 5rem);
+    }
+
+    .slide-controls {
+        bottom: 20px;
+    }
+
+    .attraction-strip {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* DARK MODE */
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .form-card,
+html[data-theme="dark"] .video-card,
+html[data-theme="dark"] .stat,
+html[data-theme="dark"] .modal-content {
+    background: var(--surface);
+    color: var(--ink);
+}
+html[data-theme="dark"] .card p,
+html[data-theme="dark"] .section-heading p,
+html[data-theme="dark"] .video-credit,
+html[data-theme="dark"] .photo-credit { color: var(--muted); }
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select {
+    background: #10141b;
+    color: #f0f1f2;
+    border-color: rgba(112,166,193,.25);
+}
+html[data-theme="dark"] .filter-btn { background: var(--surface); color: #dce7ef; }
+html[data-theme="dark"] .filter-btn.active,
+html[data-theme="dark"] .filter-btn:hover { background: var(--sky); color: #121212; }
+html[data-theme="dark"] .notice { background: rgba(112,166,193,.10); }
+html[data-theme="dark"] .timeline-item { background: rgba(112,166,193,.08); }
+html[data-theme="dark"] .theme-toggle { background: rgba(255,255,255,.12); }
+
+/* TOUR DETAIL */
+.tour-detail-hero { min-height: 560px; position: relative; overflow: hidden; border-radius: var(--radius); background: #111; }
+.tour-detail-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.tour-detail-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 45px; color: white; background: linear-gradient(0deg, rgba(18,18,18,.95), rgba(18,18,18,.04) 70%); }
+.tour-detail-overlay h1 { max-width: 850px; font-size: clamp(2.7rem, 6vw, 5.8rem); margin: 12px 0; }
+.tour-detail-overlay p { max-width: 720px; color: #dce8ef; margin-bottom: 22px; }
+.rate-table-wrap { margin-top: 35px; padding: 30px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+.rate-table { width: 100%; margin-top: 18px; border-collapse: collapse; }
+.rate-table th, .rate-table td { text-align: left; padding: 13px 14px; border-bottom: 1px solid var(--border); }
+.rate-table th { color: var(--navy); }
+.tour-card .card-image { height: 285px; }
+.btn-outline { border: 1px solid var(--border); color: var(--navy); background: transparent; }
+html[data-theme="dark"] .btn-outline { color: #dce8ef; border-color: rgba(112,166,193,.28); }
+
+
+/* HOMEPAGE LAKAW CTA */
+.home-lakaw-cta {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background:
+        linear-gradient(90deg, rgba(18,18,18,.94) 0%, rgba(47,54,117,.76) 48%, rgba(18,18,18,.42) 100%),
+        url("https://static.wixstatic.com/media/4163bc_f398df85255e45a88978892f7b7497f8~mv2.jpg/v1/fill/w_1400,h_800,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Caohagan%20Island%20Aerial%20by%20Jones%20Silva%20Cr.jpg") center/cover no-repeat;
+}
+
+.home-lakaw-content {
+    min-height: 390px;
+    position: relative;
+    z-index: 1;
+}
+
+.home-lakaw-content h2 {
+    max-width: 650px;
+}
+
+.home-lakaw-actions {
+    justify-content: flex-end;
+}
+
+.home-tiktok-section {
+    background: #0b0d11;
+}
+
+.home-tiktok-section .section-heading p {
+    color: #b9c5cf;
+}
+
+/* TIKTOK */
+.tiktok-shell {
+    width: min(100%, 620px);
+    margin: 0 auto;
+    border: 1px solid rgba(112,166,193,.18);
+    overflow: hidden;
+    border-radius: 22px;
+    background: #111;
+    box-shadow: var(--shadow);
+}
+
+.tiktok-player-wrap {
+    position: relative;
+    background: #111;
+}
+
+.tiktok-shell iframe {
+    display: block;
+    width: 100%;
+    height: 760px;
+    min-height: 760px;
+    max-height: 78vh;
+    border: 0;
+    background: #111;
+}
+
+.tiktok-scroll-badge {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .72);
+    color: #fff;
+    font-size: .78rem;
+    font-weight: 700;
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.tiktok-scroll-badge.is-playing {
+    opacity: .18;
+}
+
+.tiktok-credit {
+    display: grid;
+    gap: 6px;
+    padding: 17px 18px 20px;
+    color: #dbe6ee;
+    background: #141820;
+}
+
+.tiktok-credit strong {
+    color: #fff;
+}
+
+.tiktok-credit span {
+    font-size: .84rem;
+    color: #aeb9c5;
+}
+
+.tiktok-credit a {
+    color: var(--sky);
+    font-size: .84rem;
+    font-weight: 700;
+}
+
+.tiktok-play-btn {
+    width: fit-content;
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 15px;
+    background: var(--sky);
+    color: #121212;
+    font-weight: 800;
+}
+
+.tiktok-play-btn:hover {
+    filter: brightness(1.06);
+}
+
+.tiktok-status {
+    min-height: 1.25em;
+    font-size: .78rem;
+    color: #9eabb7;
+}
+
+.homepage-tiktok-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.homepage-tiktok-shell {
+    max-width: 620px;
+}
+
+@media (max-width: 980px) {
+    .nav-links {
+        position: absolute;
+        top: 84px;
+        left: 20px;
+        right: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+        background: var(--ink);
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: 18px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .tiktok-shell iframe { height: 650px; min-height: 650px; }
+    .tour-detail-hero { min-height: 520px; }
+    .tour-detail-overlay { padding: 28px; }
+    .tour-detail-overlay h1 { font-size: clamp(2.6rem, 12vw, 4.2rem); }
+    .rate-table-wrap { padding: 20px; }
+    .container {
+        width: min(100% - 28px, var(--max));
+    }
+
+    .navbar {
+        min-height: 74px;
+    }
+
+    .brand img {
+        width: 125px;
+    }
+
+    .nav-links {
+        top: 74px;
+    }
+
+    .hero {
+        min-height: 650px;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        padding: 65px 0;
+    }
+
+    h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .form-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-gallery {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LapuGo Travel & Tours — Cebu island adventures, destinations, tour packages and travel assistance.">
+    <title>Gallery | LapuGo Travel & Tours</title>
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.dataset.theme=localStorage.getItem("lapugo-theme")||"dark";</script>
+</head>
+
+<body data-page="gallery">
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="brand" href="index.html" aria-label="LapuGo Travel & Tours home">
+                <img src="logo-transparent.png" alt="LapuGo Travel & Tours">
+            </a>
+            <nav class="nav-links" id="navLinks" aria-label="Primary navigation"></nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="page-hero">
+    <div class="container">
+        <div class="eyebrow">Real Cebu visuals</div>
+        <h1>Gallery</h1>
+        <p>Take a quick visual trip through Cebu. Each photo has a short description and courtesy/source credit so you can explore the destination without reading a wall of text.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+</section>
+
+<section class="section dark-section">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">Travel video</div>
+            <h2>Watch before you book.</h2>
+            <p>Watch real Cebu travel vlogs from independent creators. To avoid YouTube embed/configuration errors, the site opens the original YouTube video when you press Play.</p>
+        </div>
+        <div class="grid grid-2 video-grid" id="videoGrid"></div>
+    </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">Explore the locations</div>
+            <h2>Interactive Cebu map</h2>
+            <p>Explore Cebu City heritage stops and South Cebu attractions on the map before you plan your trip.</p>
+        </div>
+        <iframe
+            class="map-frame"
+            title="Interactive map of Cebu tourist attractions"
+            src="https://www.google.com/maps?q=Magellan%27s%20Cross%2C%20Fort%20San%20Pedro%2C%20Kawasan%20Falls%2C%20Moalboal%2C%20Oslob%2C%20Cebu%2C%20Philippines&output=embed"
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Gallery image">
+    <div class="modal-content">
+        <button class="modal-close" type="button" aria-label="Close image">×</button>
+        <img src="" alt="">
+        <div class="card-body modal-caption"></div>
+    </div>
+</div>
+
+    </main>
+
+    <footer class="footer" id="siteFooter"></footer>
+
+    <script src="site-data.js"></script><script src="app.js"></script>
+</body>
+</html>

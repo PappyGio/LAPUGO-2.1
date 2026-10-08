@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LapuGo Travel & Tours — Cebu island adventures, destinations, tour packages and travel assistance.">
+    <title>Booking | LapuGo Travel & Tours</title>
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.dataset.theme=localStorage.getItem("lapugo-theme")||"dark";</script>
+</head>
+
+<body data-page="booking">
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="brand" href="index.html" aria-label="LapuGo Travel & Tours home">
+                <img src="logo-transparent.png" alt="LapuGo Travel & Tours">
+            </a>
+            <nav class="nav-links" id="navLinks" aria-label="Primary navigation"></nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="page-hero">
+    <div class="container">
+        <div class="eyebrow">Booking request</div>
+        <h1>Tell us about your trip.</h1>
+        <p>Choose a package, share your date and group size, and let LapuGo follow up with the next steps.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="grid grid-2">
+            <div class="form-card">
+                <h2>Booking / Inquiry Form</h2>
+                <p style="margin:8px 0 25px;color:var(--muted);">Prototype form — no payment is collected here.</p>
+
+                <form data-demo-form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Mobile Number</label>
+                            <input id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input id="date" name="date" type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers</label>
+                            <input id="travelers" name="travelers" type="number" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="package">Tour Package</label>
+                            <select id="package" name="package">
+                                <option value="">Choose a package</option>
+                                <option>Cebu: Oslob Whale Sharks, Tumalog Falls & Moalboal Sardines</option>
+                                <option>Three-Island Tour Package</option>
+                                <option>Custom / Not Sure Yet</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label for="pickup">Pickup Location</label>
+                            <input id="pickup" name="pickup" placeholder="Hotel / area / city">
+                        </div>
+                        <div class="form-group full">
+                            <label for="message">Trip Details</label>
+                            <textarea id="message" name="message" required placeholder="Tell us your preferred activities, pickup point, group needs or questions."></textarea>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-dark" type="submit" style="margin-top:18px;">Submit Booking Request</button>
+                </form>
+            </div>
+
+            <div>
+                <div class="section-heading">
+                    <div class="eyebrow">Before you send</div>
+                    <h2>Know what to include.</h2>
+                    <p>The more details you provide, the easier it is to prepare an accurate response.</p>
+                </div>
+
+                <ul class="check-list">
+                    <li>Preferred travel date</li>
+                    <li>Number of travelers</li>
+                    <li>Pickup location</li>
+                    <li>Shared or private tour preference</li>
+                    <li>Preferred package</li>
+                    <li>Special requests or activity preferences</li>
+                </ul>
+
+                <div class="notice" style="margin-top:28px;">
+                    <strong>Important:</strong> Rates, availability, pickup coverage and marine activities should be reconfirmed with LapuGo before a real booking is accepted.
+                </div>
+
+                <div class="card" style="margin-top:25px;">
+                    <img class="card-image" src="https://www.weseektravel.com/wp-content/uploads/2021/01/moalboal-sardine-run-panagsama-beach-4-512x768.jpg" alt="Moalboal sea turtle and sardine experience">
+                    <div class="card-body">
+                        <h3>Want to see the route first?</h3>
+                        <p>Review the itinerary and real destination gallery before submitting your inquiry.</p>
+                        <div class="actions" style="margin-top:15px;">
+                            <a class="btn btn-dark" href="tour-details.html?tour=south-cebu">Tour Details</a>
+                            <a class="btn" style="border:1px solid var(--border);" href="gallery.html">Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer" id="siteFooter"></footer>
+
+    <script src="site-data.js"></script><script src="app.js"></script>
+</body>
+</html>

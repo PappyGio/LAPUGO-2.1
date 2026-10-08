@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LapuGo Travel & Tours — Cebu island adventures, destinations, tour packages and travel assistance.">
+    <title>Destinations | LapuGo Travel & Tours</title>
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.dataset.theme=localStorage.getItem("lapugo-theme")||"dark";</script>
+</head>
+
+<body data-page="destinations">
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="brand" href="index.html" aria-label="LapuGo Travel & Tours home">
+                <img src="logo-transparent.png" alt="LapuGo Travel & Tours">
+            </a>
+            <nav class="nav-links" id="navLinks" aria-label="Primary navigation"></nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="page-hero">
+    <div class="container">
+        <div class="eyebrow">Cebu destination guide</div>
+        <h1>Explore Cebu</h1>
+        <p>Discover Cebu’s heritage landmarks and natural attractions, from historic Cebu City to waterfalls, mountains, marine sites and islands.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="search-box">
+            <input id="destinationSearch" type="search" placeholder="Search heritage sites, nature spots, activities..." aria-label="Search destinations">
+            <a class="btn btn-dark" href="booking.html">Plan a Trip</a>
+        </div>
+        <div class="filters" id="destinationFilters"></div>
+        <div class="grid grid-3" id="destinationGrid"></div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer" id="siteFooter"></footer>
+
+    <script src="site-data.js"></script><script src="app.js"></script>
+</body>
+</html>
